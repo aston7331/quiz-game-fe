@@ -1,0 +1,14 @@
+{
+    "id": "3192e205-0625-45c2-85b9-e1f5a757c908",
+    "orgId": 39940,
+    "name": "Sample Project",
+    "version": "1.0.0",
+    "createdDate": "2024-04-30T07:49:36.859Z",
+    "handler": "sample-project",
+    "region": "US",
+    "description": "this is in the react JS project, Its Quze App",
+    "repository": null,
+    "branch": null,
+    "gitProvider": null,
+    "gitOrganization": null
+}

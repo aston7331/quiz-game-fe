@@ -1,0 +1,89 @@
+.Main{
+    margin: 5rem 20rem;
+
+    .nameBody{
+        width: 15rem;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 20px;
+    }
+    .nameButton{
+        width: 8rem;
+        color: #fff;
+        margin-left: 2rem;
+        border: 1px solid rgb(110, 241, 235);
+        background-color: blue;
+        padding: 12px;
+
+        &:hover{
+            box-shadow: 0px 0px 10px 5px rgb(203, 230, 173);
+            // background-color: greenyellow;
+            // color: black;
+        }
+    }
+
+    .Header{
+        width: 100%;
+        text-align: center;
+    }
+
+    .MainBody{
+        width: 100%;
+    }
+    
+    .UlList {
+        display: flex;
+        flex-direction: column;
+        width: 39rem;
+        
+        .list {
+            display: flex;
+            margin-bottom: 0.5rem; // Adjust as needed
+            button {
+                flex: 1;
+                padding: 0.5rem 1rem;
+                background-color: #fff;
+                border: 1px solid blueviolet;
+                color: blueviolet;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                
+                &.selected {
+                    background-color: rgb(0, 68, 214); // Styling for selected option
+                    color: white;
+                    border-color: rgb(0, 30, 197);
+                }
+                
+                &.correct {
+                    background-color: green; // Styling for correct answer
+                    color: white;
+                    border-color: green;
+                }
+                
+                &.incorrect {
+                    background-color: red; // Styling for incorrect answer
+                    color: white;
+                    border-color: red;
+                }
+            }
+        }
+    }
+
+    .restartButton {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+       
+        &:hover {
+           background-color: #0056b3;
+        }
+       }
+       
+    
+}
