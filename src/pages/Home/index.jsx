@@ -19,6 +19,7 @@ const Home = () => {
   const fetchQuestions = async () => {
     try {
       const response = await getQuestion();
+      console.log(response)
       setQuestions(response?.data || []);
     } catch (error) {
       console.error('Error fetching questions:', error);
@@ -28,7 +29,8 @@ const Home = () => {
 
   const fetchScores = async () => {
     try {
-      const response = await getScore();
+      const name = localStorage.getItem("name")
+      const response = await getScore(name);
 
       setScore(response?.data || []);
     } catch (error) {
@@ -94,11 +96,6 @@ const Home = () => {
 
     return () => clearInterval(timerId);
   }, [timer, quizEnded]);
-
-  // useEffect(() => {
-  //   fetchQuestions();
-  // }, []);
-
 
   const handleOptionSelect = async (option) => {
     setSelectedOption(option);

@@ -3,7 +3,7 @@ import { ApiUrl } from "../api/apiUrl";
 
 export const getQuestion = async () => {
     try {
-        const result = await axios.post(`${ApiUrl.GET_QUESTION}`);
+        const result = await axios.get(`${ApiUrl.GET_QUESTION}`);
         return {
             success: true,
             data: result?.data
@@ -38,9 +38,10 @@ export const submitAnswer = async (userAnswer) => {
 }
 
 
-export const getScore = async () => {
+export const getScore = async (data) => {
     try {
-        const result = await axios.post(`${ApiUrl.GET_SCORE}`);
+        console.log(data, "What data come here")
+        const result = await axios.post(`${ApiUrl.GET_SCORE}`, data);
         return {
             success: true,
             data: result?.data
