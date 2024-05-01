@@ -79,7 +79,7 @@ export const clearDatabase = async () => {
 
 export const addUser = async (name) => {
     try {
-        const result = await axios.post(`${ApiUrl.ADD_USER}`, { name });
+        const result = await axios.get(`${ApiUrl.ADD_USER}`, { name });
         console.log(result)
         return {
             success: true,
