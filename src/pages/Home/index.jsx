@@ -30,7 +30,7 @@ const Home = () => {
   const fetchScores = async () => {
     try {
       const name = localStorage.getItem("name")
-      const response = await getScore(name);
+      const response = await getScore("");
 
       setScore(response?.data || []);
     } catch (error) {
@@ -96,6 +96,11 @@ const Home = () => {
 
     return () => clearInterval(timerId);
   }, [timer, quizEnded]);
+
+  // useEffect(() => {
+  //   fetchQuestions();
+  // }, []);
+
 
   const handleOptionSelect = async (option) => {
     setSelectedOption(option);
