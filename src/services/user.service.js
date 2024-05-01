@@ -24,7 +24,11 @@ export const getQuestion = async () => {
 // };
 export const submitAnswer = async (userAnswer) => {
     try {
-        const result = await axios.post(`${ApiUrl.SUBMIT_ANSWER}`, userAnswer);
+        const result = await axios.post(`${ApiUrl.SUBMIT_ANSWER}`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'true' // incorrect
+        }}, userAnswer);
         return {
             success: true,
             data: result?.data
