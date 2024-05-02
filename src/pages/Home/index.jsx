@@ -69,6 +69,7 @@ const Home = () => {
   const handleSubmitName = async (e) => {
     e.preventDefault();
     const response = await addUser(name);
+    console.log(name , "Please enter the name over here")
     if (response.success) {
       setQuizStarted(true);
       setTimer(10);
